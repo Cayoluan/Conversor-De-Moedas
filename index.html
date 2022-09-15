@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+
+</head>
+
+
+<body>
+
+    <div class="container">
+        <h1 class="page-title">
+          Conversor de moedas
+        </h1>
+        <p class="page-subtitle">
+          Descubra os valores em real R$
+        </p>
+        <img label for="moeda">Insira o valor</label><br>
+        <input type="number" id="valor" size="2" /><br>
+        <button type="submit" onclick="Converter()">Dolar US$ = Real R$</button>
+        <button type="submit" onclick="Converter2()">Euro € = Real R$</button>
+        <button type="submit" onclick="Converter3()">Peso Argentino $ = Real R$</button>
+        <button type="submit" onclick="Converter4()">Libra esterlina £ = Real R$</button>
+        <h2 id="valorConvertido"></h2>
+      </div>
+      <a href="https://github.com/Cayoluan" target="_blank">
+        <img src="./img/Git.png" alt="" class="git-hub">
+
+        <script>
+
+function Converter() {
+  var valorElemento = document.getElementById("valor");
+  var valor = valorElemento.value;
+  var valorEmDolarNumerico = parseFloat(valor);
+  console.log(valorEmDolarNumerico);
+
+  var ValorEmReal = valorEmDolarNumerico * 5.21;
+  console.log(ValorEmReal);
+
+  var elementoValorConvertido = document.getElementById("valorConvertido");
+  var valorConvertido = "O Resultado em real é R$" + ValorEmReal.toFixed(2);
+  elementoValorConvertido.innerHTML = valorConvertido;
+}
+
+function Converter2() {
+  var valorElemento = document.getElementById("valor");
+  var valor = valorElemento.value;
+  var valorEmEuroNumerico = parseFloat(valor);
+  console.log(valorEmEuroNumerico);
+
+  var ValorEmReal = valorEmEuroNumerico * 5.20;
+  console.log(ValorEmReal);
+
+  var elementoValorConvertido = document.getElementById("valorConvertido");
+  var valorConvertido = "O Resultado em real é R$" + ValorEmReal.toFixed(2);
+  elementoValorConvertido.innerHTML = valorConvertido;
+}
+
+function Converter3() {
+  var valorElemento = document.getElementById("valor");
+  var valor = valorElemento.value;
+  var valorEmPesoNumerico = parseFloat(valor);
+  console.log(valorEmPesoNumerico);
+
+  var ValorEmReal = valorEmPesoNumerico * 0.036;
+  console.log(ValorEmReal);
+
+  var elementoValorConvertido = document.getElementById("valorConvertido");
+  var valorConvertido = "O Resultado em real é R$" + ValorEmReal.toFixed(2);
+  elementoValorConvertido.innerHTML = valorConvertido;
+}
+
+function Converter4() {
+  var valorElemento = document.getElementById("valor");
+  var valor = valorElemento.value;
+  var valorEmLibraNumerico = parseFloat(valor);
+  console.log(valorEmLibraNumerico);
+
+  var ValorEmReal = valorEmLibraNumerico * 5.98;
+  console.log(ValorEmReal);
+
+  var elementoValorConvertido = document.getElementById("valorConvertido");
+  var valorConvertido = "O Resultado em real é R$" + ValorEmReal.toFixed(2);
+  elementoValorConvertido.innerHTML = valorConvertido;
+}
+
+        </script>
+    
+</body>
+
+
+</html>
